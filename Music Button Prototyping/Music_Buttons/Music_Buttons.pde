@@ -1,10 +1,8 @@
 //Global Variables 
 //
 void setup (){
-  
-} // End setup
-//Display
-size(700, 500); //width, height
+   //Display
+ size(700, 500); //width, height
 fullScreen(); // displayWidth, displayHeight 
  //
  //Population: visual data
@@ -13,7 +11,9 @@ fullScreen(); // displayWidth, displayHeight
  //
  void draw() {
    //
-   //Button
+   //Button Space
+   //rect( X, Y, Width, Height );
+   //
  //Stop Button
  //rect(X, Y, Width, Height); //Layout
  //rect(X, Y, Width, Height);
@@ -24,25 +24,31 @@ fullScreen(); // displayWidth, displayHeight
  //rect(X, Y, Width, Height);
  //
  //Play Button
+ //rect( X, Y, Width, Height ); //Layout
 // triangle(X1, Y1, X2, Y2, X3, Y3);
  //
  //MUTE Button
+ //rect( X, Y, Width, Height ); //Layout
  //Students to develop
  //
- //Fast Forward in the song 
+ //Fast Forward in the song
+ //rect( X, Y, Width, Height ); //Layout
  //triangle(X1, Y1, X2, Y2, X3, Y3);
  //triangle(X1, Y1, X2, Y2, X3, Y3);
  //
  //Reverse in the song
+ //rect( X, Y, Width, Height ); //Layout
  //triangle(X1, Y1, X2, Y2, X3, Y3);
  //triangle(X1, Y1, X2, Y2, X3, Y3);
  //
  //Next button, skip file 
+  //rect( X, Y, Width, Height ); //Layout 
  //triangle(X1, Y1, X2, Y2, X3, Y3);
- //rect(X, Y, Width, Height);
+ //rect(X, Y, Width, Height); 
  //
  //Previous Button
   //rect( X, Y, Width, Height );
+   //rect( X, Y, Width, Height );
   //triangle( X1, Y1, X2, Y2, X3, Y3 );
   //
   //Loop the Song Once
