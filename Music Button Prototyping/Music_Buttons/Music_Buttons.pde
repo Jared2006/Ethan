@@ -18,47 +18,47 @@ void setup (){
  //
  float centerX = width * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
  float centerY = height * 3/4;
- int buttonPositionColum*6, buttonPositionRow*1/8;
+ int buttonPositionColum, buttonPositionRow;
  print("Confirming Center X;", centerX);
  println("/t Confirming Center Y:", centerY); //Illstrates a character escape
  //
- pauseX1 = centerX - buttonReferentMeasure*1/4;
- pauseY1 = centerY - buttonReferentMeasure*1/4;
+ pauseX1 = centerX - buttonReferentMeasure*1/2;
+ pauseY1 = centerY - buttonReferentMeasure*1/2;
  pauseWidth = buttonReferentMeasure * 1/4;
  pauseX2 = centerX + buttonReferentMeasure*1/4;
  pauseY2 = pauseY1;
-  playX = pauseX1;
-  playY = pauseY1;
+  playX1 = pauseX1;
+  playY1 = pauseY1;
  //
- buttonPositionRow = 1;
+ buttonPositionRow = 2;
  muteX = pauseX1;
- muteY = pauseY1 + ( buttonPositionRow * buttonReferentMeasure ); 
+ muteY = pauseY1 + ( buttonPositionRow * buttonReferentMeasure*1/2); 
  //
  loopIX = pauseX1;
- loopIY = pauseY1; + ( buttonPositionRow * buttonReferentMeasure );
+ loopIY = pauseY1 + ( buttonPositionRow * buttonReferentMeasure );
  //
- buttonPositionColum = 1;
+ buttonPositionColum =5;
   ffX = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   ffY = pauseY1;
   //
   rrX = pauseX1 - ( buttonPositionColum*buttonReferentMeasure );
   rrY = pauseY1;
   //
-  buttonPositionColum = 2; 
+  buttonPositionColum = 3; 
   nextX = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   nextY = pauseY1;
   //
   prevX = pauseX1 - ( buttonPositionColum*buttonReferentMeasure );
   prevY = pauseY1;
   //
-  buttonPositionColum = 3;
+  buttonPositionColum = 2;
   loop1X = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   loop1Y = pauseY1;
   //
   stopX = pauseX1 - ( buttonPositionColum*buttonReferentMeasure );
   stopY = pauseY1;
   //
-  buttonPositionRow = 2;
+  buttonPositionRow = 1;
   loopPlaylistX = pauseX1;
   loopPlaylistY = pauseY1 + ( buttonPositionRow*buttonReferentMeasure );
   //
@@ -76,56 +76,59 @@ void setup (){
  //Pause Button 
  //rect( pauseX1, pauseY1, buttonSide, buttonSide); //Layout 
  rect( pauseX1, pauseY1, pauseWidth, buttonSide);
- //rect( pauseX2, pauseY2, pauseWidth, buttonSide);
+ rect( pauseX2, pauseY2, pauseWidth, buttonSide);
  //
  //Play Button
  //rect( playX1, playY1, buttonSide, buttonSide  ); //Layout
  //triangle (playX1, playY1, playX2, playY2, playX3, playY3);
  //
  //MUTE Button
- //rect( muteX, muteY, buttonSide, buttonSide ); //Layout
+ rect( muteX, muteY, buttonSide, buttonSide ); //Layout
  //Students to develop
  //
  //Fast Forward in the song
- //rect( X, Y, Width, Height ); //Layout
- //triangle(X1, Y1, X2, Y2, X3, Y3);
- //triangle(X1, Y1, X2, Y2, X3, Y3);
+ rect( ffX, ffY, buttonSide, buttonSide ); //Layout
+ //triangle(ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A);
+ //triangle(ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B);
  //
  //Reverse in the song
- //rect( X, Y, Width, Height ); //Layout
- //triangle(X1, Y1, X2, Y2, X3, Y3);
- //triangle(X1, Y1, X2, Y2, X3, Y3);
+ rect( rrX, rrY, buttonSide, buttonSide ); //Layout
+ //triangle(rrX1A, rrY1A, rrX2A, rrAY2, rrX3A, rrY3A);
+ //triangle(rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B);
  //
  //Next button, skip file 
-  //rect( X, Y, Width, Height ); //Layout 
- //triangle(X1, Y1, X2, Y2, X3, Y3);
- //rect(X, Y, Width, Height); 
+  rect( nextX, nextY, buttonSide, buttonSide ); //Layout 
+ //triangle(nextX1, nextY1, nextX2, nextY2, nextX3, nextY3);
+ //rect(nextX, nextY, nextWidth, nextHeight); 
  //
  //Previous Button
-  //rect( X, Y, Width, Height );
-   //rect( X, Y, Width, Height );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
+  rect( prevX, prevY, buttonSide, buttonSide );
+  //triangle( prevX1, prevY1, prevX2, prevY2, prevX3, prevY3 );
+  //rect( prevX, prevY, prevWidth, prevHeight );
   //
   //Loop the Song Once
   //Students to Develop
-  ///ellipse( X, Y, WidthDiameter, HeightDiameter );
-  //ellipse( X, Y, WidthDiameter, HeightDiameter );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
+  rect( loop1X, loop1Y, buttonSide, buttonSide ); 
+  ///ellipse( loop1X, loop1Y, loop1WidthDiameter, loop1HeightDiameter );
+  //ellipse( loop1X, loop1Y, loop1WidthDiameter, loop1HeightDiameter );
+  //triangle( loop1X1, loop1Y1, loop1X2, loop1Y2, loop1X3, loop1Y3 );
   //
   //Loop the Song Infinitely
   //Students to Develop
-  //ellipse( X, Y, WidthDiameter, HeightDiameter );
-  //ellipse( X, Y, WidthDiameter, HeightDiameter );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
+  rect( loopIX, loopIY, buttonSide, buttonSide ); //Layout
+  //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
+  //ellipse( loopIX, loopIY, loopIWidthDiameter, loopIHeightDiameter );
+  //triangle( loopIX1, loopIY1, loopIX2, loopIY2, loopIX3, loopIY3 );
   //
   //Loop the Playlist (infinitely)
   //Students to Develop
-  //ellipse( X, Y, WidthDiameter, HeightDiameter );
-  //ellipse( X, Y, WidthDiameter, HeightDiameter );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
+  rect( loopPlaylistX, loopPlaylistY, buttonSide, buttonSide ); //Layout 
+  //ellipse( loopPlaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPLaylistHeightDiameter );
+  //ellipse( loopPLaylistX, loopPlaylistY, loopPlaylistWidthDiameter, loopPlaylistHeightDiameter );
+  //triangle( loopPlaylistX1, loopPlaylistY1, loopPlaylistX2, loopPlaylistY2, loopPlaylistX3, loopPlaylistY3 );
   //
   //OPTIONAL Shuffle 
-  //rect(X, Y, Width, Height); //Layout
+  //rect(shuffleX, shuffleY, buttonSide, buttonSide ); //Layout
   //2-D Shapes
   //
  } //End draw
