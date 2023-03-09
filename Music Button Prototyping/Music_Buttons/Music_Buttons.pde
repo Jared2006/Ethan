@@ -19,7 +19,7 @@ void setup (){
  //Population: visual data
  buttonReferentMeasure = width * 1/18;
  buttonSide = buttonReferentMeasure;
- spaceWidth = buttonReferentMeasure * 1/8;
+ spaceWidth = buttonReferentMeasure * 1/18;
  //
  float centerX = width * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
  float centerY = height * 3/4;
@@ -46,7 +46,7 @@ void setup (){
  loopIX = pauseX1;
  loopIY = pauseY1 + ( buttonPositionRow * buttonReferentMeasure );
  //
- buttonPositionColum =2;
+ buttonPositionColum =1;
   ffX1A = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   ffY1A = pauseY1;
   ffX3A = ffX1A;
@@ -66,11 +66,11 @@ void setup (){
   rrY1A = pauseY1;
   rrX3A = rrX1A;
   rrY3A = rrY1A + buttonReferentMeasure;
-  rrX2A = rrX1A - ( buttonPositionColum*buttonReferentMeasure )*1/8;
-  rrY2A = rrY1A + ( rrY3A - rrY1A )*2/4;
+  rrX2A = rrX1A - ( buttonPositionColum*buttonReferentMeasure )*1/2;
+  rrY2A = rrY1A + ( rrY3A - rrY1A )*1/2;
   rrX1B = rrX2A;
   rrY1B = rrY1A;
-  rrX2B = rrX2A - ( buttonPositionColum*buttonReferentMeasure )*1/8;
+  rrX2B = rrX2A - ( buttonPositionColum*buttonReferentMeasure )*1/2;
   rrY2B = rrY2A;
   rrX3B = rrX2A;
   rrY3B = rrY3A;
