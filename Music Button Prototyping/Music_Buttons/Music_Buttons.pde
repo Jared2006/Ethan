@@ -52,7 +52,6 @@ void setup() {
   buttonPositionColum = 1;
   ffX1A = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   ffY1A = pauseY1;
-  //Note: need points 1 & 3 to calculate 2
   ffX3A = ffX1A;
   ffY3A = ffY1A + buttonReferentMeasure;
   ffX2A = ffX1A + buttonReferentMeasure*1/2;
@@ -79,7 +78,7 @@ void setup() {
   rrX3B = rrX2A;
   rrY3B = rrY3A;
   //
-  buttonPositionColum = 3; //can increment with +=1
+  buttonPositionColum = 3; 
   nextX = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   nextY = pauseY1;
   nextX1 = nextX;
@@ -94,7 +93,7 @@ void setup() {
   //
   prevX = pauseX1 - ( buttonPositionColum*buttonReferentMeasure );
   prevY = pauseY1;
-  prevX1 = rrX2B; //backward from previous button
+  prevX1 = rrX2B/1.1; //backward from previous button
   prevY1 = prevY;
   prevX3 = prevX1;
   prevY3 = prevY1 + buttonReferentMeasure;
@@ -102,27 +101,22 @@ void setup() {
   prevY2 = prevY1 + ( prevY3 - prevY1 )*1/2;
   prevXR = prevX2 - buttonReferentMeasure*1/2;
   prevYR = prevY1;
-  prevWidth = buttonReferentMeasure*1/2;
+  prevWidth = buttonReferentMeasure*1/4;
   //
-  buttonPositionColum = 4;
+  buttonPositionColum = 5;
   loop1X = pauseX1 + ( buttonPositionColum*buttonReferentMeasure );
   loop1Y = pauseY1;
   //
   stopX = pauseX1 - ( buttonPositionColum*buttonReferentMeasure );
   stopY = pauseY1;
   //
-  buttonPositionRow = 2;
+  buttonPositionRow = 3;
   loopPlaylistX = pauseX1;
   loopPlaylistY = pauseY1 + ( buttonPositionRow*buttonReferentMeasure );
   //
 } //End setup
 //
 void draw() {
-  //
-  /*Note: draw the pause button first, in the middle
-   All other buttons are drawn around it
-   All pseudocode starts like rect( X, Y, Width, Height )
-   */
   //
   //Confirming Local Variable Center X & Y garbage collected from setup()
   //print("Confirming Center X:", centerX);
