@@ -31,14 +31,13 @@ void setup() {
   //
   pauseX1 = centerX - buttonReferentMeasure*1/2;
   pauseY1 = centerY - buttonReferentMeasure*1/3;
-  pauseWidth = buttonReferentMeasure * 1/4;
-  pauseX2 = centerX + pauseWidth*1/4;
+  pauseWidth = buttonReferentMeasure * 1/3;
+  pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
   playX1 = pauseX1;
   playY1 = pauseY1;
   playX3 = playX1;
   playY3 = pauseY1 + buttonReferentMeasure;
-  //Note: need playY3 before playY2
   playX2 = playX1 + buttonReferentMeasure;
   playY2 = playY1 + (playY3-playY1)*1/2;
   //
@@ -110,7 +109,7 @@ void setup() {
   stopX = pauseX1 - ( buttonPositionColum*buttonReferentMeasure );
   stopY = pauseY1;
   //
-  buttonPositionRow = 3;
+  buttonPositionRow = 2;
   loopPlaylistX = pauseX1;
   loopPlaylistY = pauseY1 + ( buttonPositionRow*buttonReferentMeasure );
   //
